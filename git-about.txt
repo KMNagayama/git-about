@@ -1,0 +1,69 @@
+Configuração Inicial
+
+git config --global user.name "Seu Nome" - Configura o nome do usuário para todos os repositórios no sistema.
+git config --global user.email "seuemail@exemplo.com" - Configura o email do usuário para todos os repositórios no sistema.
+git config --list - Mostra todas as configurações do Git para o usuário atual.
+
+=================================================================================================================================================================
+
+Criar e Clonar Repositórios
+
+git init - Inicializa um novo repositório Git na pasta atual.
+git clone <url-do-repositório> - Clona um repositório remoto para a máquina local.
+
+=================================================================================================================================================================
+
+Operações Básicas
+
+git add <arquivo> - Adiciona o arquivo especificado ao stage (preparação para commit).
+git add . - Adiciona todos os arquivos modificados ao stage.
+git commit -m "Mensagem do commit" - Cria um commit com as mudanças no stage e uma mensagem descritiva.
+git status - Mostra o status dos arquivos (modificados, no stage, etc.).
+git diff - Exibe as diferenças entre o código modificado e o último commit.
+git log - Mostra o histórico de commits do repositório.
+
+=================================================================================================================================================================
+
+Trabalhando com Branches
+
+git branch <nome-da-branch> - Cria uma nova branch com o nome especificado.
+git checkout <nome-da-branch> - Muda para a branch especificada.
+git checkout -b <nome-da-branch> - Cria e muda para uma nova branch ao mesmo tempo.
+git branch - Lista todas as branches no repositório.
+git merge <nome-da-branch> - Mescla a branch especificada na branch atual.
+git branch -d <nome-da-branch> - Deleta a branch especificada.
+
+=================================================================================================================================================================
+
+Trabalhando com Remotos
+
+git remote add origin <url-do-repositório> - Adiciona um repositório remoto com o nome origin.
+git remote -v - Mostra os repositórios remotos configurados.
+git push origin <nome-da-branch> - Envia (faz push) as mudanças da branch especificada para o repositório remoto origin.
+git pull - Baixa (faz pull) as mudanças do repositório remoto para a branch atual.
+
+=================================================================================================================================================================
+
+Revertendo e Resetando
+
+git revert <hash-do-commit> - Cria um novo commit que desfaz as mudanças do commit especificado.
+git reset --hard <hash-do-commit> - Reseta o repositório para o estado do commit especificado, perdendo todas as mudanças feitas após esse commit.
+git reset --soft HEAD~1 - Desfaz o último commit, mas preserva as mudanças no stage.
+
+=================================================================================================================================================================
+
+Stash (Guardar Mudanças Temporariamente)
+
+git stash - Salva temporariamente as mudanças não comitadas para poder mudar de branch ou fazer pull sem conflito.
+git stash apply - Aplica as mudanças guardadas no stash à branch atual.
+git stash list - Mostra uma lista de stashes salvos.
+
+=================================================================================================================================================================
+
+Outros Comandos Úteis
+
+git shortlog - Exibe um resumo do repositório, agrupando commits por autor.
+git diff <branch1> <branch2> - Compara as diferenças entre duas branches especificadas.
+git tag <nome-da-tag> - Cria uma nova tag no commit atual.
+git tag - Lista todas as tags no repositório.
+git push origin --tags - Envia todas as tags locais para o repositório remoto.
